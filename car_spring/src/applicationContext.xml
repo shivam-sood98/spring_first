@@ -10,14 +10,24 @@
 	
     <!-- Define your beans here -->
     
-    
+    <bean id="mrf"
+    class="car_tyre.brand_mrf">
+    </bean>
  	
  	<bean id="bmw"
  	class="car.brand_bmw">
+ 	<constructor-arg ref="mrf" />
+ 	</bean>
+ 	
+ 	
+ 	
+ 	<bean id="ceat"
+ 	class="car_tyre.brand_ceat">
  	</bean>
  	
  	<bean id="audi"
  	class="car.brand_audi">
+ 	<property name="tyre" ref="ceat" />
  	</bean>
 
     
